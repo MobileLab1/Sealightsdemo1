@@ -47,4 +47,9 @@ public class StepDefinitionResiliencystudiototalfeatures extends ParentScenario 
 	public void i_am_going_to_another_feature_of_resiliency_studio_application() throws Throwable {
 		new ResiliencyStudioTotalFeatures(driver).transferring_to_other_feature();
 	}
+	@When("^I click on log out button to come out of application$")
+       public void i_click_on_logout_button_to_come_out_of_application() throws Throwable{
+              new LoginPage(driver).click_logout_button();
+       }
+ 
 }
