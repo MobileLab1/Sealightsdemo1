@@ -186,12 +186,12 @@ public class ViewMonkeyStrategy extends ParentPage {
 	}
 
 	public void clicking_on_checkbox_change_on_view_table() throws InterruptedException {
-		this.OSTYPE_CHECK.click();
+	jsLib.callEmbeddedSelenium(driver,"triggerMouseEventAt",this.OSTYPE_CHECK,"click","0,0");
 		driver.manage().timeouts().implicitlyWait(PropertyUtil.LOW_TIMEOUT, TimeUnit.SECONDS);
 		Thread.sleep(3000);
 		AssertJUnit.assertTrue("table columns are not present as expected after checking",
 				this.OS_TYPE_HEADER.isDisplayed());
-		this.OSTYPE_CHECK.click();
+		jsLib.callEmbeddedSelenium(driver,"triggerMouseEventAt",this.OSTYPE_CHECK,"click","0,0");
 		this.FLAVOR_CHECK.click();
 		driver.manage().timeouts().implicitlyWait(PropertyUtil.LOW_TIMEOUT, TimeUnit.SECONDS);
 		AssertJUnit.assertTrue("table columns are not present as expected after checking",
