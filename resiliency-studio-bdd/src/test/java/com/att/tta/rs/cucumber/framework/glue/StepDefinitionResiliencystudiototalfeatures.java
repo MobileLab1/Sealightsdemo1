@@ -35,6 +35,7 @@ import com.att.tta.rs.cucumber.framework.page.objects.ResiliencyStudioTotalFeatu
 
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 
 public class StepDefinitionResiliencystudiototalfeatures extends ParentScenario {
 
