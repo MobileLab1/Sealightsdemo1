@@ -115,6 +115,6 @@ public class StepDefinitionApplicationOfRSALogin extends ParentScenario {
 
 	@After
 	public void afterScenario() {
-		closeBrowser();
+		//closeBrowser();
 	}
 }
