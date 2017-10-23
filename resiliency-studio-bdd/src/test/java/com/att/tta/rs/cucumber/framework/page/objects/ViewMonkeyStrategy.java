@@ -214,7 +214,7 @@ jsLib.callEmbeddedSelenium(driver,"triggerMouseEventAt",this.GENERIC_FLAG_CHECK,
 		jsLib.callEmbeddedSelenium(driver,"triggerMouseEventAt",this.SCRIPT_TYPE_CHECK,"click","0,0");	
 		jsLib.callEmbeddedSelenium(driver,"triggerMouseEventAt",this.VERSION_CHECK,"click","0,0");
 		jsLib.callEmbeddedSelenium(driver,"triggerMouseEventAt",this.DEFAULTTAG_CHECK,"click","0,0");
-		jsLib.callEmbeddedSelenium(driver,"triggerMouseEventAt",his.GENERIC_FLAG_CHECK,"click","0,0");
+		jsLib.callEmbeddedSelenium(driver,"triggerMouseEventAt",this.GENERIC_FLAG_CHECK,"click","0,0");
 		
 		jsLib.callEmbeddedSelenium(driver, "triggerMouseEventAt", this.CREATED_BY_CHECK, "click", "0,0");
 
