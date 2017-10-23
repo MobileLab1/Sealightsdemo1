@@ -192,36 +192,37 @@ public class ViewMonkeyStrategy extends ParentPage {
 		AssertJUnit.assertTrue("table columns are not present as expected after checking",
 				this.OS_TYPE_HEADER.isDisplayed());
 		jsLib.callEmbeddedSelenium(driver,"triggerMouseEventAt",this.OSTYPE_CHECK,"click","0,0");
-		this.FLAVOR_CHECK.click();
+		jsLib.callEmbeddedSelenium(driver,"triggerMouseEventAt",this.FLAVOR_CHECK,"click","0,0");
 		driver.manage().timeouts().implicitlyWait(PropertyUtil.LOW_TIMEOUT, TimeUnit.SECONDS);
 		AssertJUnit.assertTrue("table columns are not present as expected after checking",
 				this.FLAVOR_HEADER.isDisplayed());
-		this.FLAVOR_CHECK.click();
-
-		this.GENERIC_FLAG_CHECK.click();
+		jsLib.callEmbeddedSelenium(driver,"triggerMouseEventAt",this.FLAVOR_CHECK,"click","0,0");
+jsLib.callEmbeddedSelenium(driver,"triggerMouseEventAt",this.GENERIC_FLAG_CHECK,"click","0,0");
+		
 		driver.manage().timeouts().implicitlyWait(PropertyUtil.LOW_TIMEOUT, TimeUnit.SECONDS);
 		AssertJUnit.assertTrue("table columns are not present as expected after checking",
 				this.GENERIC_FLAG_HEADER.isDisplayed());
 
-		this.GENERIC_FLAG_CHECK.click();
+		jsLib.callEmbeddedSelenium(driver,"triggerMouseEventAt",this.GENERIC_FLAG_CHECK,"click","0,0");
 	}
 
 	public void clicking_all_checkboxes_and_change_view() throws InterruptedException {
-		this.OSTYPE_CHECK.click();
-		this.FLAVOR_CHECK.click();
-		this.FAILURE_CATEGORY_CHECK.click();
-		this.FAILURESUB_CATEGORY_CHECK.click();
-		this.SCRIPT_TYPE_CHECK.click();
-		this.VERSION_CHECK.click();
-		this.DEFAULTTAG_CHECK.click();
-		this.GENERIC_FLAG_CHECK.click();
+		jsLib.callEmbeddedSelenium(driver,"triggerMouseEventAt",this.OSTYPE_CHECK,"click","0,0");
+		jsLib.callEmbeddedSelenium(driver,"triggerMouseEventAt",this.FLAVOR_CHECK,"click","0,0");
+		jsLib.callEmbeddedSelenium(driver,"triggerMouseEventAt",this.FAILURE_CATEGORY_CHECK,"click","0,0");
+			jsLib.callEmbeddedSelenium(driver,"triggerMouseEventAt",this.FAILURESUB_CATEGORY_CHECK,"click","0,0");
+		jsLib.callEmbeddedSelenium(driver,"triggerMouseEventAt",this.SCRIPT_TYPE_CHECK,"click","0,0");	
+		jsLib.callEmbeddedSelenium(driver,"triggerMouseEventAt",this.VERSION_CHECK,"click","0,0");
+		jsLib.callEmbeddedSelenium(driver,"triggerMouseEventAt",this.DEFAULTTAG_CHECK,"click","0,0");
+		jsLib.callEmbeddedSelenium(driver,"triggerMouseEventAt",his.GENERIC_FLAG_CHECK,"click","0,0");
+		
 		jsLib.callEmbeddedSelenium(driver, "triggerMouseEventAt", this.CREATED_BY_CHECK, "click", "0,0");
 
 		jsLib.callEmbeddedSelenium(driver, "triggerMouseEventAt", this.CREATED_DATE_CHECK, "click", "0,0");
 		jsLib.callEmbeddedSelenium(driver, "triggerMouseEventAt", this.LASTMODIFIED_BY_CHECK, "click", "0,0");
 		jsLib.callEmbeddedSelenium(driver, "triggerMouseEventAt", this.LAST_MODIFIED_DATE_CHECK, "click", "0,0");
 
-		Thread.sleep(PropertyUtil.LOW_TIMEOUT);
+		Thread.sleep(PropertyUtil.LOW_TIMEOUT);Thread.sleep(PropertyUtil.LOW_TIMEOUT);
 
 		driver.manage().timeouts().implicitlyWait(PropertyUtil.LOW_TIMEOUT, TimeUnit.SECONDS);
 		Thread.sleep(5000);
