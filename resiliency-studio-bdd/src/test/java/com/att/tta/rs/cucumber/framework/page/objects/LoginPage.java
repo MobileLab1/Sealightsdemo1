@@ -64,6 +64,12 @@ public class LoginPage extends ParentPage {
 
 	@FindBy(id = "userlogout")
 	private WebElement CLICK_LOGOUT_BUTTON;
+	
+	@FindBy(xpath="//*[@id='myNavbar']/ul/li[2]/a/span[1]")
+       private WebElement LOG_OUT_DROPDOWN;
+      
+       @FindBy(xpath="//a[@href='#/logout']")
+       private WebElement LOG_OUT_BUTTON;
 
 	protected WebDriver driver;
 
@@ -89,9 +95,11 @@ public class LoginPage extends ParentPage {
 		Thread.sleep(3000);
 	}
 
-	public void click_logout_button() throws InterruptedException {
-		Thread.sleep(PropertyUtil.MEDIUM_MILLISEC);
-		jsLib.callEmbeddedSelenium(driver, "triggerMouseEventAt", this.SELECT_LOGOUT, "click", "0,0");
-		jsLib.callEmbeddedSelenium(driver, "triggerMouseEventAt", this.CLICK_LOGOUT_BUTTON, "click", "0,0");
-	}
+	
+ 
+public void click_logout_button() throws InterruptedException {
+              Thread.sleep(PropertyUtil.MEDIUM_MILLISEC);
+              jsLib.callEmbeddedSelenium(driver, "triggerMouseEventAt", this.LOG_OUT_DROPDOWN, "click", "0,0");
+              jsLib.callEmbeddedSelenium(driver, "triggerMouseEventAt", this.LOG_OUT_BUTTON, "click", "0,0");
+       }
 }
